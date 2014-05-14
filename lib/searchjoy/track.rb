@@ -6,7 +6,7 @@ module Searchjoy
 
       if options[:track]
         attributes = options[:track] == true ? {} : options[:track]
-        results.search = Searchjoy::Search.create({search_type: self.name, query: term, results_count: results.total_count}.merge(attributes))
+        results.search = Searchjoy::Search.create({search_type: self.name, query: term, results_count: results.total_results}.merge(attributes))
       end
 
       results
